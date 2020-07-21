@@ -16,8 +16,16 @@ public class DestroyOutOfBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z < bottomBound || transform.position.z > topBound)
+
+        if (transform.position.z > topBound)
         {
+            // Destroys projectile when it exists the top of the screen
+            Destroy(gameObject);
+        }
+        else if (transform.position.z < bottomBound)
+        {
+            // Game is over if any animal exists the bottom of the screen
+            Debug.Log("Game Over");
             Destroy(gameObject);
         }
     }
