@@ -1,12 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
+    public float verticalInput;
+
     public float speed = 10.0f;
-    public float xRange = 10.0f;
+
+    public float horizontalRange = 10.0f;
+    public float minVerticalRange = 0.0f;
+    public float maxVerticalRange = 5.0f;
 
     public GameObject projectilePrefab;
 
@@ -20,10 +26,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        verticalInput = Input.GetAxis("Vertical");
 
-        float xpos = Mathf.Clamp(transform.position.x, -xRange, xRange);
-        transform.position = new Vector3(xpos, transform.position.y, transform.position.z);
+        Vector3 deltaVec = new Vector3(horizontalInput, 0, verticalInput);
+        transform.Translate(deltaVec * Time.deltaTime * speed);
+
+        float xpos = Mathf.Clamp(transform.position.x, -horizontalRange, horizontalRange);
+        float zpos = Mathf.Clamp(transform.position.z, minVerticalRange, maxVerticalRange);
+        transform.position = new Vector3(xpos, transform.position.y, zpos);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
