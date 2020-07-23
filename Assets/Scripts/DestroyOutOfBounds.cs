@@ -25,7 +25,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         else if (transform.position.z < bottomBound)
         {
             // Game is over if any animal exists the bottom of the screen
-            Debug.Log("Game Over");
+            // Debug.Log("Game Over");
             Destroy(gameObject);
         }
     }

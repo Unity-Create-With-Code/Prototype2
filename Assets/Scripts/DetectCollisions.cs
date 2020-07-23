@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +21,17 @@ public class DetectCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // TODO: Can destroy an animal when another animal collides with it.
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if (gameManager == null)
+        {
+            Debug.Log("NULL in " + gameObject.name);
+        }
+
+        if (other.gameObject != player)
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+
+            gameManager.GetComponent<GameManager>().AnimalFed();
+        }
     }
 }
