@@ -24,12 +24,19 @@ public class Health : MonoBehaviour
         OnHealthPctChanged(currentHealthPct);
     }
 
+    public void ModifySpeed()
+    {
+        float speed = GetComponent<MoveForward>().speed;
+        GetComponent<MoveForward>().speed = speed * 0.75f;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag != "Player")
         {
             Destroy(other.gameObject);
             ModifyHealth(20);
+            ModifySpeed();
 
             int amount = 20;
             if (currentHealth >= maxHealth)
