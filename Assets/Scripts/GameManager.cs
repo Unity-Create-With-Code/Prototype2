@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject livesUI;
     public GameObject scoreUI;
+    public GameObject gameOverUI;
 
     private int numLives = 3;
     private int playerScore = 0;
@@ -17,6 +19,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameOverUI.SetActive(false);
         UpdateUI();
     }
 
@@ -29,11 +32,12 @@ public class GameManager : MonoBehaviour
     public void PlayerHit()
     {
         --numLives;
+        numLives = Mathf.Clamp(numLives, 0, numLives);
         UpdateUI();
 
         if (numLives == 0)
         {
-            Debug.Log("GAME OVER");
+            gameOverUI.SetActive(true);
         }
     }
 

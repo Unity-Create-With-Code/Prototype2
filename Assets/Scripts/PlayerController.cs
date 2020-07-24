@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab;
     public GameObject gameManager;
+    public GameObject splatPrefab;
 
     // Update is called once per frame
     void Update()
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
         if (other.tag != "Food")
         {
             gameManager.GetComponent<GameManager>().PlayerHit();
+            Instantiate(splatPrefab, transform.position, Quaternion.identity);
         }
     }
 }

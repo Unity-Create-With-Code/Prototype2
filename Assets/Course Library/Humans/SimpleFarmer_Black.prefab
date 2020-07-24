@@ -416,6 +416,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1810386265332167371, guid: ea65262344f6b224587acf7733bad934,
     type: 3}
   gameManager: {fileID: 0}
+  splatPrefab: {fileID: 0}
 --- !u!65 &1117962730
 BoxCollider:
   m_ObjectHideFlags: 0
