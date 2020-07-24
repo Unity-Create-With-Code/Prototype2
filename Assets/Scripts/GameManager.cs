@@ -20,12 +20,6 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AnimalFed(int amount)
     {
         playerScore += amount;

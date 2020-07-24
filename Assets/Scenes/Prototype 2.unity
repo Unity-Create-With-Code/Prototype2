@@ -376,10 +376,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 437307801, guid: 31959d00cac0e604ba9c11045a9132f9, type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9144072858963621134, guid: 31959d00cac0e604ba9c11045a9132f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -439,6 +435,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Animal_Doe_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144072858963891176, guid: 31959d00cac0e604ba9c11045a9132f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31959d00cac0e604ba9c11045a9132f9, type: 3}
@@ -846,10 +847,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 110027318, guid: 9407723e36f7dd34b8ffaa79cde0163e, type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2332591724307250984, guid: 9407723e36f7dd34b8ffaa79cde0163e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -909,6 +906,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Animal_Moose_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332591724307523930, guid: 9407723e36f7dd34b8ffaa79cde0163e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9407723e36f7dd34b8ffaa79cde0163e, type: 3}
@@ -1312,10 +1314,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 233983343, guid: 255ad4f0b7a1150409d0978889928f8a, type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 953325675100231450, guid: 255ad4f0b7a1150409d0978889928f8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1375,6 +1373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Animal_Fox_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 953325675100281152, guid: 255ad4f0b7a1150409d0978889928f8a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 255ad4f0b7a1150409d0978889928f8a, type: 3}

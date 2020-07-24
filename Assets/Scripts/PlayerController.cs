@@ -17,11 +17,6 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject gameManager;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -37,9 +32,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject go = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-            go.GetComponent<DetectCollisions>().player = gameObject;
-            go.GetComponent<DetectCollisions>().gameManager = gameManager;
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         }
     }
 

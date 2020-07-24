@@ -13,10 +13,6 @@ public class Health : MonoBehaviour
 
     public event Action<float> OnHealthPctChanged = delegate { };
 
-    private void OnEnable()
-    {
-    }
-
     public void ModifyHealth(int amount)
     {
         currentHealth += amount;
@@ -47,16 +43,5 @@ public class Health : MonoBehaviour
 
             gameManager.GetComponent<GameManager>().AnimalFed(amount);
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }
