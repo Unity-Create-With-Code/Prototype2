@@ -29,7 +29,7 @@ public class DetectCollisions : MonoBehaviour
         if (other.gameObject != player)
         {
             Destroy(gameObject);
-            Destroy(other.gameObject);
+            // Destroy(other.gameObject);
 
             gameManager.GetComponent<GameManager>().AnimalFed();
         }

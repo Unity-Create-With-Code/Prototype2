@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject gameManager;
+
     public GameObject[] animalPrefabs;
 
     private float spawnRangeX = 20.0f;
@@ -67,7 +70,9 @@ public class SpawnManager : MonoBehaviour
             rot = Quaternion.LookRotation(Vector3.left);
         }
 
-        Instantiate(animalPrefabs[animalIndex], spawnPos, rot);
+        GameObject go  = Instantiate(animalPrefabs[animalIndex], spawnPos, rot);
+        go.GetComponent<Health>().player = player;
+        go.GetComponent<Health>().gameManager = gameManager;
     }
 
 }
