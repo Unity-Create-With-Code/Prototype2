@@ -9,11 +9,11 @@ public class SpawnManager : MonoBehaviour
 
     public GameObject[] animalPrefabs;
 
-    private float spawnRangeX = 20.0f;
-    private float spawnRangeZ = 20.0f;
+    private float spawnRangeX = 15.0f;
+    private float spawnRangeZ = 15.0f;
 
-    private float spawnPosLeftX = -20.0f;
-    private float spawnPosRightX = 20.0f;
+    private float spawnPosLeftX = -15.0f;
+    private float spawnPosRightX = 15.0f;
 
     private float spawnPosZ = 20.0f;
 
