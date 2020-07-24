@@ -10,7 +10,9 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] animalPrefabs;
 
     private float spawnRangeX = 15.0f;
-    private float spawnRangeZ = 15.0f;
+
+    private float minSpawnRangeZ = 0.0f;
+    private float maxSpawnRangeZ = 15.0f;
 
     private float spawnPosLeftX = -15.0f;
     private float spawnPosRightX = 15.0f;
@@ -60,13 +62,13 @@ public class SpawnManager : MonoBehaviour
         else if (spawn < spawnDistribution[1])
         {
             // Spawn from left
-            spawnPos = new Vector3(spawnPosLeftX, 0, Random.Range(-spawnRangeZ, spawnRangeZ));
+            spawnPos = new Vector3(spawnPosLeftX, 0, Random.Range(minSpawnRangeZ, maxSpawnRangeZ));
             rot = Quaternion.LookRotation(Vector3.right);
         }
         else
         {
             // Spawn from right
-            spawnPos = new Vector3(spawnPosRightX, 0, Random.Range(-spawnRangeZ, spawnRangeZ));
+            spawnPos = new Vector3(spawnPosRightX, 0, Random.Range(minSpawnRangeZ, maxSpawnRangeZ));
             rot = Quaternion.LookRotation(Vector3.left);
         }
 

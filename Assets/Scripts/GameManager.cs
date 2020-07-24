@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,13 +8,16 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject spawnManager;
 
+    public GameObject livesUI;
+    public GameObject scoreUI;
+
     private int numLives = 3;
     private int playerScore = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Lives = " + numLives + " Score = " + playerScore);
+        UpdateUI();
     }
 
     // Update is called once per frame
@@ -22,19 +26,26 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void AnimalFed()
+    public void AnimalFed(int amount)
     {
-        ++playerScore;
-        Debug.Log("Score = " + playerScore);
+        playerScore += amount;
+        UpdateUI();
     }
 
     public void PlayerHit()
     {
         --numLives;
-        Debug.Log("Lives = " + numLives);
+        UpdateUI();
+
         if (numLives == 0)
         {
             Debug.Log("GAME OVER");
         }
+    }
+
+    private void UpdateUI()
+    {
+        livesUI.GetComponent<TextMeshProUGUI>().text = "Lives: " + numLives;
+        scoreUI.GetComponent<TextMeshProUGUI>().text = "Score: " + playerScore;
     }
 }

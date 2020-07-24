@@ -69,7 +69,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.232
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 1
   m_UseSpriteMesh: 0
@@ -552,6 +552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   player: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &2332591724307526236
 GameObject:
   m_ObjectHideFlags: 0

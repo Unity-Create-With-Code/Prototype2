@@ -31,7 +31,7 @@ public class DetectCollisions : MonoBehaviour
             Destroy(gameObject);
             // Destroy(other.gameObject);
 
-            gameManager.GetComponent<GameManager>().AnimalFed();
+            // gameManager.GetComponent<GameManager>().AnimalFed();
         }
     }
 }

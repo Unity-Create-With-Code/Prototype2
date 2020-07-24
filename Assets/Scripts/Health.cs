@@ -30,10 +30,15 @@ public class Health : MonoBehaviour
         {
             Destroy(other.gameObject);
             ModifyHealth(20);
+
+            int amount = 20;
             if (currentHealth >= maxHealth)
             {
+                amount += maxHealth;
                 Destroy(gameObject);
             }
+
+            gameManager.GetComponent<GameManager>().AnimalFed(amount);
         }
     }
 
