@@ -13,6 +13,11 @@ public class Health : MonoBehaviour
 
     public event Action<float> OnHealthPctChanged = delegate { };
 
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager");
+    }
+
     public void ModifyHealth(int amount)
     {
         currentHealth += amount;

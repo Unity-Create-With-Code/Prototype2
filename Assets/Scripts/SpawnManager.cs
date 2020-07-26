@@ -27,6 +27,8 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
+
         // Convert spawnChance from a percentage for each location
         // to a cumulative percentage for easier lookup later.
         float spawnTarget = spawnDistribution[0];

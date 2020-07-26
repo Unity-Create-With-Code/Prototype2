@@ -15,8 +15,14 @@ public class PlayerController : MonoBehaviour
     private float maxVerticalRange = 15.0f;
 
     public GameObject projectilePrefab;
-    public GameObject gameManager;
     public GameObject splatPrefab;
+
+    private GameObject gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager");
+    }
 
     // Update is called once per frame
     void Update()

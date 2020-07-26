@@ -595,7 +595,7 @@ PrefabInstance:
     - target: {fileID: 9144072858963891176, guid: 31959d00cac0e604ba9c11045a9132f9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31959d00cac0e604ba9c11045a9132f9, type: 3}
@@ -1066,7 +1066,7 @@ PrefabInstance:
     - target: {fileID: 2332591724307523930, guid: 9407723e36f7dd34b8ffaa79cde0163e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9407723e36f7dd34b8ffaa79cde0163e, type: 3}
@@ -1286,15 +1286,10 @@ PrefabInstance:
     - target: {fileID: 1117962729, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
       propertyPath: splatPrefab
       value: 
-      objectReference: {fileID: 1370559166}
+      objectReference: {fileID: 1906144561369842784, guid: 83bfd2cf83a22074a85cf8be971e82d6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
---- !u!1 &1370559166 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1906144561369842784, guid: 83bfd2cf83a22074a85cf8be971e82d6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1906144562180462302}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1590138454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,8 +1575,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1117962728}
   gameManager: {fileID: 1119191450}
-  splatPrefab: {fileID: 1906144561369842784, guid: 83bfd2cf83a22074a85cf8be971e82d6,
-    type: 3}
   animalPrefabs:
   - {fileID: 9144072858963891176, guid: 31959d00cac0e604ba9c11045a9132f9, type: 3}
   - {fileID: 953325675100281152, guid: 255ad4f0b7a1150409d0978889928f8a, type: 3}
@@ -1615,7 +1608,7 @@ PrefabInstance:
     - target: {fileID: 1906144561369842784, guid: 83bfd2cf83a22074a85cf8be971e82d6,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1906144561369842785, guid: 83bfd2cf83a22074a85cf8be971e82d6,
         type: 3}
