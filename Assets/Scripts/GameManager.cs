@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+// TODO - Does the GameManager have to be a MonoBehavior?
 public class GameManager : MonoBehaviour
 {
     public GameObject player;

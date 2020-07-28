@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject gameManager;
+    private GameObject player;
+    private GameObject gameManager;
 
     public GameObject[] animalPrefabs;
 
@@ -27,6 +27,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
 
         // Convert spawnChance from a percentage for each location
@@ -69,9 +70,7 @@ public class SpawnManager : MonoBehaviour
             rot = Quaternion.LookRotation(Vector3.left);
         }
 
-        GameObject go  = Instantiate(animalPrefabs[animalIndex], spawnPos, rot);
-        go.GetComponent<Health>().player = player;
-        go.GetComponent<Health>().gameManager = gameManager;
+        Instantiate(animalPrefabs[animalIndex], spawnPos, rot);
     }
 
 }

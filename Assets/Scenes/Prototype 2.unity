@@ -592,11 +592,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Animal_Doe_01
       objectReference: {fileID: 0}
-    - target: {fileID: 9144072858963891176, guid: 31959d00cac0e604ba9c11045a9132f9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31959d00cac0e604ba9c11045a9132f9, type: 3}
 --- !u!1 &425805626
@@ -1062,11 +1057,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Animal_Moose_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2332591724307523930, guid: 9407723e36f7dd34b8ffaa79cde0163e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9407723e36f7dd34b8ffaa79cde0163e, type: 3}
@@ -1537,11 +1527,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Animal_Fox_01
       objectReference: {fileID: 0}
-    - target: {fileID: 953325675100281152, guid: 255ad4f0b7a1150409d0978889928f8a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 255ad4f0b7a1150409d0978889928f8a, type: 3}
 --- !u!1 &2062309881
@@ -1573,8 +1558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b6340b2bc92ba4a895b8d406e82698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1117962728}
-  gameManager: {fileID: 1119191450}
   animalPrefabs:
   - {fileID: 9144072858963891176, guid: 31959d00cac0e604ba9c11045a9132f9, type: 3}
   - {fileID: 953325675100281152, guid: 255ad4f0b7a1150409d0978889928f8a, type: 3}

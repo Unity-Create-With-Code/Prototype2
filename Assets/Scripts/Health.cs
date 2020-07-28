@@ -8,13 +8,14 @@ public class Health : MonoBehaviour
     public int maxHealth = 100;
     private int currentHealth = 0;
 
-    public GameObject player;
-    public GameObject gameManager;
+    private GameObject player;
+    private GameObject gameManager;
 
     public event Action<float> OnHealthPctChanged = delegate { };
 
     private void Start()
     {
+        player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
     }
 
@@ -30,6 +31,8 @@ public class Health : MonoBehaviour
         float speed = GetComponent<MoveForward>().speed;
         GetComponent<MoveForward>().speed = speed * 0.75f;
     }
+
+    // TODO - Move to a DetectCollision script.
 
     private void OnTriggerEnter(Collider other)
     {
